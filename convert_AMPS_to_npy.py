@@ -111,6 +111,8 @@ with tqdm(len(filelist), force_tty=True) as bar:
                 basis,
             )
 
+            blank[i] = resampled
+
         if do_plot:
             plot_ecg(np.stack(leads), "pngs/resampled.png")
         # final input size to the model is 12 x 1250
