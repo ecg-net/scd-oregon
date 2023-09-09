@@ -156,6 +156,8 @@ def batch_predict(model, images):
 def plot_example(waveform, lime_colors=None, save_path=None):
     # Grid Parameters
 
+    waveform *= -1
+
     n_boxes_between = 4
     margin_boxes = n_boxes_between / 2
     n_boxes = 2 * margin_boxes + 11 * n_boxes_between
